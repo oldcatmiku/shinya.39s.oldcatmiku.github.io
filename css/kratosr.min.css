@@ -3514,7 +3514,7 @@ span.mjx-chtml.MJXc-display {
 
 @media (min-width:768px) {
     body.custom-background {
-        background-image: url(../images/bg.jpg);
+        background-image: url(../images/bg.webp);
         background-position: center;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -3531,4 +3531,3 @@ span.mjx-chtml.MJXc-display {
 small{
     font-size: 9px;
 }
-/* # sourceMappingURL=../maps/kratosr.min.css.map */
