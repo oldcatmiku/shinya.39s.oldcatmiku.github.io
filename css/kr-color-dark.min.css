@@ -300,9 +300,9 @@ span.mjx-chtml.MJXc-display {
     background-image: url(../images/about.webp)
 }
 
-.kratos-cover.kratos-cover-2 {
+/* .kratos-cover.kratos-cover-2 {
     background-image: url(../images/banner_dark.webp)
-}
+} */
 
 @media (min-width:768px) {
     body.custom-background {
@@ -315,7 +315,7 @@ span.mjx-chtml.MJXc-display {
 }
 
 .post-comments.bg-image textarea {
-    background: url(../images/comment_dark.webp) 100% 100% no-repeat !important
+    background: url(../images/bg.webp) 100% 100% no-repeat !important
 }
 
 .gt-counts {
