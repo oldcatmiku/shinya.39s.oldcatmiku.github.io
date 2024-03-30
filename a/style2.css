@@ -1,0 +1,126 @@
+@font-face {
+    font-family: "lolita";
+    src: url("lolita(c).ttf");
+}
+div#output {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+.title{
+    font-size: 24px;
+    display: unset;
+    font-family: lolita;
+    text-align: center;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+.bord {
+    display: grid;
+    margin: 20px;
+    border: 2px solid #29fb6f42;
+    border-radius: 2%;
+    width: 280px;
+    justify-items: center;
+}
+.title2{
+    font-size: 30px;
+    text-align: center;
+    font-family: lolita;
+    margin-bottom: 10%
+}
+.circle-container {
+    width: fit-content;
+    height: fit-content;
+    background-color: #ff7a7a;
+    border-radius: 6%;
+    padding: 3px;
+}
+
+.circle-text {
+    margin: 2px;
+    color: white;
+    text-align: center;
+}
+.tag{
+    margin-bottom: -10px;
+    margin-top: 16px;
+}
+.warning{
+    border: 2px solid rgb(255, 69, 69);
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 3px;
+
+}
+.text{
+    font-size: large;
+    text-align: center;
+    font-family: lolita;
+}
+.footer{
+    font-size: 12px;
+    text-align: center;
+    margin-top: 200px;
+}
+@media screen and (max-width: 768px) {
+    .title2{
+        margin-bottom: 30%;
+    }
+    .bord {
+        width: 30%;
+        margin-bottom: 20px;
+        margin-left: 3px;
+        margin-right: 3px;
+        border-radius: 5%;
+    }
+    .title {
+        font-size: 14px;
+    }
+    body{
+        color: #FFF;
+        background: url(phone.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    #output {
+        background: rgb(255 255 255 / 10%);
+        box-shadow: 3px 3px 6px 3px rgb(0 0 0 / 30%);
+    }
+}
+/* @media screen and (max-width: 768px) {
+    .bord {
+        display: flex;
+        margin: 8px;
+        border: 2px solid #6c0000;
+        border-radius: 2%;
+        padding: 1%;
+        width: 100%;
+        height: fit-content;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+    
+    img{
+        width: 100%;
+    }
+    .imgs{
+        flex: 0 0 50%
+    }
+    .title{
+        flex: 0 0 55px
+    }
+    .tag{
+        writing-mode: vertical-rl;
+        margin-top: 0;
+        margin-left: 8px;
+        margin-right: 8px;
+        
+    }
+} */
