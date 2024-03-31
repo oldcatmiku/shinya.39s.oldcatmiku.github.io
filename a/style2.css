@@ -87,12 +87,15 @@ img{
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
-        height: auto;
     }
     #output {
         background: rgb(255 255 255 / 10%);
         box-shadow: 3px 3px 6px 3px rgb(0 0 0 / 30%);
     }
+    * {
+        box-sizing: border-box;
+        transition: width 0.5s ease-in-out  0s;
+   }
 }
 /* @media screen and (max-width: 768px) {
     .bord {
