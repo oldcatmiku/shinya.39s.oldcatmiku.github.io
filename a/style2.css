@@ -87,6 +87,7 @@ img{
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
+        height: auto;
     }
     #output {
         background: rgb(255 255 255 / 10%);

@@ -1,7 +1,7 @@
 var animeList= [
     {
 	"name":"伪物语",
-	"img":"https://img.moegirl.org.cn/common/thumb/5/5a/Bakemonogatari_%E7%99%BD%E9%87%91disco.jpg/750px-Bakemonogatari_%E7%99%BD%E9%87%91disco.jpg", 
+	"img":"https://img2.imgtp.com/2024/03/31/5Kxrru22.png", 
     "url":"https://www.acfun.cn/bangumi/aa6004318",
 },
 {
@@ -11,7 +11,7 @@ var animeList= [
 },
 {
 	"name":"轻音少女第二季",
-	"img":"https://i0.hdslb.com/bfs/bangumi/c3c68d569810a1eec76d878ae39f62e8c0096d3e.jpg@282w_375h.webp", 
+	"img":"https://img2.imgtp.com/2024/03/31/i0NirBdz.png", 
     "url":"https://www.vdm1.com/play/17780-1-19.html",
 },
 {
@@ -26,7 +26,7 @@ var animeList= [
 },
 {
 	"name":"凉宫春日的忧郁 2009",
-	"img":"https://i0.hdslb.com/bfs/bangumi/image/2466a126362937da57729a58bf5b815ffe236dd7.png@282w_375h.webp", 
+	"img":"https://img2.imgtp.com/2024/03/31/nIaIbkre.png", 
     "url":"https://www.vdm1.com/video/145350.html",
 },
 {
