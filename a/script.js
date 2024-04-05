@@ -37,7 +37,7 @@ var animeList= [
 {
 	"name":"孤独摇滚！",
 	"img":"https://image.baidu.com/search/down?url=https://lz.sinaimg.cn/large/006yt1Omgy1h6ns614olkj30no0xcn5c.jpg", 
-    "url":"孤独摇滚！",
+    "url":"https://www.vdm1.com/video/116940.html",
 }
 ];
 
