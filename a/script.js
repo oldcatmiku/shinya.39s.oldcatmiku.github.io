@@ -7,7 +7,7 @@ var animeList= [
 },
 {
 	"name":"莉兹与青鸟",
-	"img":"https://c-ssl.duitang.com/uploads/blog/202107/27/20210727134750_c5eaa.jpg", 
+	"img":"https://s21.ax1x.com/2024/04/15/pFvUMpF.jpg", 
     "url":"https://pan.baidu.com/s/1JkIZCspH0Ytv0Hn_YqoDKA?pwd=jwek",
 },
 {
