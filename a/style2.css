@@ -1,7 +1,16 @@
 @font-face {
-    font-family: "lolita";
-    src: url("lolita(c).ttf");
+    font-family: "萝莉体";
+    src: url("萝莉体.eot"); /* IE9 */
+    src: url("萝莉体.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    
+    url("萝莉体.woff") format("woff"), /* chrome、firefox */
+    url("萝莉体.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+    
+    url("萝莉体.svg#萝莉体") format("svg"); /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
 }
+
 div#output {
     display: flex;
     flex-wrap: wrap;
