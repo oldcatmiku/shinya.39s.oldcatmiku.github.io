@@ -24,14 +24,14 @@
 <meta property="og:site_name" content="老猫的 Blog">
 <meta property="og:description" content="如图，箭头指向的是网站的副标题。在 Hexo 根目录下_config.yml文件中，subtitle的值就是网页的副标题。我的这个网站是这样写的： 12345678# Sitetitle: 老猫的 Blogsubtitle: &amp;#x27;养老养老（目前正在测试捏www）&amp;#x27;description: &amp;#x27;oldcat&amp;#x27;keywords:author: oldcatlangu">
 <meta property="og:locale">
-<meta property="og:image" content="https://oldcatmiku.github.io/2023/08/15/%E4%BF%AE%E6%94%B9-Hexo-%E7%9A%84%E6%B8%B2%E6%9F%93%E5%99%A8%EF%BC%8C%E8%AE%A9%E9%A6%96%E9%A1%B5%E5%8A%A0%E8%BD%BD-html-%E4%BB%A3%E7%A0%81/https:/z1.ax1x.com/2023/09/30/pPqugs0.png">
+<meta property="og:image" content="https://oldcatmiku.github.io/2023/08/15/%E4%BF%AE%E6%94%B9-Hexo-%E7%9A%84%E6%B8%B2%E6%9F%93%E5%99%A8%EF%BC%8C%E8%AE%A9%E9%A6%96%E9%A1%B5%E5%8A%A0%E8%BD%BD-html-%E4%BB%A3%E7%A0%81/images/img/13.png">
 <meta property="article:published_time" content="2023-08-15T06:25:36.000Z">
-<meta property="article:modified_time" content="2023-09-29T17:51:03.029Z">
+<meta property="article:modified_time" content="2024-08-10T16:24:25.654Z">
 <meta property="article:author" content="oldcat">
 <meta property="article:tag" content="技术">
 <meta property="article:tag" content="网页">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://oldcatmiku.github.io/2023/08/15/%E4%BF%AE%E6%94%B9-Hexo-%E7%9A%84%E6%B8%B2%E6%9F%93%E5%99%A8%EF%BC%8C%E8%AE%A9%E9%A6%96%E9%A1%B5%E5%8A%A0%E8%BD%BD-html-%E4%BB%A3%E7%A0%81/https:/z1.ax1x.com/2023/09/30/pPqugs0.png">
+<meta name="twitter:image" content="https://oldcatmiku.github.io/2023/08/15/%E4%BF%AE%E6%94%B9-Hexo-%E7%9A%84%E6%B8%B2%E6%9F%93%E5%99%A8%EF%BC%8C%E8%AE%A9%E9%A6%96%E9%A1%B5%E5%8A%A0%E8%BD%BD-html-%E4%BB%A3%E7%A0%81/images/img/13.png">
   
   <!-- 站点验证相关 -->
   
@@ -216,15 +216,15 @@
             
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
                 <div class="icon"><i class="fa fa-warning"></i></div>
-                <div class="text"><p>本文最后编辑于 <time datetime="1696009863029"></time> 前，其中的内容可能需要更新。</p></div>
+                <div class="text"><p>本文最后编辑于 <time datetime="1723307065654"></time> 前，其中的内容可能需要更新。</p></div>
             </div>
             
             
             
             <hr />
-            <div itemprop="articleBody"><p><img src="https://s1.ax1x.com/2023/08/15/pPQVlWj.png" alt="图0-1 subtitle的位置" title="subtitle的位置"><br>如图，箭头指向的是网站的副标题。<br>在 Hexo 根目录下<code>_config.yml</code>文件中，<code>subtitle</code>的值就是网页的副标题。<br>我的这个网站是这样写的：</p>
+            <div itemprop="articleBody"><p><img src="/images/img/12.png" alt="图0-1 subtitle的位置" title="subtitle的位置"><br>如图，箭头指向的是网站的副标题。<br>在 Hexo 根目录下<code>_config.yml</code>文件中，<code>subtitle</code>的值就是网页的副标题。<br>我的这个网站是这样写的：</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Site</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">老猫的</span> <span class="string">Blog</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">&#x27;养老养老（目前正在测试捏www）&#x27;</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">&#x27;oldcat&#x27;</span></span><br><span class="line"><span class="attr">keywords:</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">oldcat</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-Hans</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">&#x27;Asia/Shanghai&#x27;</span></span><br></pre></td></tr></table></figure>
-<p>如果想要实现“每次打开网页，都会出现不同的一句话”或者引入“一言”的话，就需要把副标题改成一段 html 代码。但是，如果直接修改<code>_config.yml</code>文件，就会有以下效果：<img src="https://s1.ax1x.com/2023/08/15/pPQV8ln.png" alt="图0-2 错误的修改" title="错误的修改"><br>所以我们要找到相关主题的渲染器，修改其中的代码，让它直接加载我们的 html 代码。<br><br></p>
+<p>如果想要实现“每次打开网页，都会出现不同的一句话”或者引入“一言”的话，就需要把副标题改成一段 html 代码。但是，如果直接修改<code>_config.yml</code>文件，就会有以下效果：<img src="/images/img/11.png" alt="图0-2 错误的修改" title="错误的修改"><br>所以我们要找到相关主题的渲染器，修改其中的代码，让它直接加载我们的 html 代码。<br><br></p>
 <h2 id="1-查找主题的渲染器"><a href="#1-查找主题的渲染器" class="headerlink" title="1. 查找主题的渲染器"></a>1. 查找主题的渲染器</h2><p>一般来说，Hexo 主题渲染器的位置是在<code>hexo\node_modules\[主题的名字]\layout</code><br>我用的是 kratos-rebirth 的主题，也就是在hexo\node_modules\hexo-theme-kratos-rebirth\layout。</p>
 <p>在这个目录下面有一些<code>.ejs</code>文件，EJS 是用 JavaScript 代码生成 HTML 页面的模板语言，想要了解更加详细的资料可以查阅 <a target="_blank" rel="noopener" href="https://ejs.bootcss.com/">EJS文档</a>。<br>我们要改的是 header，就打开目录下<code>_partial\header.ejs</code>（其他主题同理）<br><br></p>
 <h2 id="2-修改渲染器的-ejs-文件"><a href="#2-修改渲染器的-ejs-文件" class="headerlink" title="2. 修改渲染器的 ejs 文件"></a>2. 修改渲染器的 ejs 文件</h2><p>Blog 主题的开发者会根据 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/variables">Hexo API</a> 提供的变量 api 来获取页面信息，进行开发。<br>下面是摘抄的一些全局变量：</p>
@@ -289,7 +289,7 @@
                     <a class="tag-none-link" href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a>, <a class="tag-none-link" href="/tags/%E7%BD%91%E9%A1%B5/" rel="tag">网页</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2023-09-29T17:51:03.029Z" itemprop="dateModified">最后编辑：2023-09-30</time>
+                    <time datetime="2024-08-10T16:24:25.654Z" itemprop="dateModified">最后编辑：2024-08-11</time>
                 </div>
             </div>
         </footer>
@@ -340,7 +340,7 @@
                 文章
             </span>
             <span class="count">
-                8
+                9
             </span>
         </a>
         <a class="meta-item" href="/categories/">
@@ -383,7 +383,7 @@
   <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
     <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
       <div class="tag-clouds">
-        <a href="/tags/Q-A/" style="font-size: 0.6em;">Q&A</a> <a href="/tags/%E5%AF%BC%E8%88%AA/" style="font-size: 0.7em;">导航</a> <a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 0.8em;">技术</a> <a href="/tags/%E6%8E%8C%E6%9C%BA/" style="font-size: 0.6em;">掌机</a> <a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 0.6em;">日常</a> <a href="/tags/%E6%9B%B4%E6%96%B0/" style="font-size: 0.6em;">更新</a> <a href="/tags/%E6%B5%8B%E8%AF%95%E7%94%A8/" style="font-size: 0.6em;">测试用</a> <a href="/tags/%E7%BA%AA%E5%BF%B5%E6%97%A5/" style="font-size: 0.6em;">纪念日</a> <a href="/tags/%E7%BD%91%E9%A1%B5/" style="font-size: 0.6em;">网页</a>
+        <a href="/tags/Q-A/" style="font-size: 0.6em;">Q&A</a> <a href="/tags/%E5%AF%BC%E8%88%AA/" style="font-size: 0.7em;">导航</a> <a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 0.8em;">技术</a> <a href="/tags/%E6%8E%8C%E6%9C%BA/" style="font-size: 0.6em;">掌机</a> <a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 0.6em;">日常</a> <a href="/tags/%E6%9B%B4%E6%96%B0/" style="font-size: 0.7em;">更新</a> <a href="/tags/%E6%B5%8B%E8%AF%95%E7%94%A8/" style="font-size: 0.6em;">测试用</a> <a href="/tags/%E7%BA%AA%E5%BF%B5%E6%97%A5/" style="font-size: 0.6em;">纪念日</a> <a href="/tags/%E7%BD%91%E9%A1%B5/" style="font-size: 0.6em;">网页</a>
       </div>
   </aside>
 
@@ -394,6 +394,12 @@
   <div class="tab-content">
       <ul class="list-group">
         
+        
+          
+          
+            <a class="list-group-item" href="/2024/08/11/%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%B0%8F%E6%9B%B4%E6%96%B0-2/"><i class="fa  fa-book"></i> 博客的小更新-2</a>
+            
+          
         
           
           
@@ -420,11 +426,7 @@
           
         
           
-          
-            <a class="list-group-item" href="/2023/08/20/%E5%85%B3%E4%BA%8E%E6%88%91%E4%B8%8E%E8%BF%99%E4%B8%AA%E7%BD%91%E7%AB%99/"><i class="fa  fa-book"></i> 关于我与这个网站</a>
             
-          
-        
           
             
           
