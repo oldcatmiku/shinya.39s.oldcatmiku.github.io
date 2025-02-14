@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+    <head>
+  <!-- 元数据 -->
+  <meta charset="utf-8">
+  <link rel="icon" href="../images/LOGO2.ico">
+  
+  <title>修改 Hexo 的渲染器，让首页加载 html 代码 | 老猫的 Blog</title>
+  
+  <meta name="author" content="oldcat" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  
+    <meta name="keywords" content="技术, 网页" />
+  
+  <meta name="description" content="如图，箭头指向的是网站的副标题。在 Hexo 根目录下_config.yml文件中，subtitle的值就是网页的副标题。我的这个网站是这样写的： 12345678# Sitetitle: 老猫的 Blogsubtitle: &amp;#x27;养老养老（目前正在测试捏www）&amp;#x27;description: &amp;#x27;oldcat&amp;#x27;keywords:author: oldcatlangu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="修改 Hexo 的渲染器，让首页加载 html 代码">
+<meta property="og:url" content="https://oldcatmiku.github.io/2023/08/15/%E4%BF%AE%E6%94%B9-Hexo-%E7%9A%84%E6%B8%B2%E6%9F%93%E5%99%A8%EF%BC%8C%E8%AE%A9%E9%A6%96%E9%A1%B5%E5%8A%A0%E8%BD%BD-html-%E4%BB%A3%E7%A0%81/index.html">
+<meta property="og:site_name" content="老猫的 Blog">
+<meta property="og:description" content="如图，箭头指向的是网站的副标题。在 Hexo 根目录下_config.yml文件中，subtitle的值就是网页的副标题。我的这个网站是这样写的： 12345678# Sitetitle: 老猫的 Blogsubtitle: &amp;#x27;养老养老（目前正在测试捏www）&amp;#x27;description: &amp;#x27;oldcat&amp;#x27;keywords:author: oldcatlangu">
+<meta property="og:locale">
+<meta property="og:image" content="https://oldcatmiku.github.io/2023/08/15/%E4%BF%AE%E6%94%B9-Hexo-%E7%9A%84%E6%B8%B2%E6%9F%93%E5%99%A8%EF%BC%8C%E8%AE%A9%E9%A6%96%E9%A1%B5%E5%8A%A0%E8%BD%BD-html-%E4%BB%A3%E7%A0%81/images/img/13.png">
+<meta property="article:published_time" content="2023-08-15T06:25:36.000Z">
+<meta property="article:modified_time" content="2024-08-10T16:24:25.654Z">
+<meta property="article:author" content="oldcat">
+<meta property="article:tag" content="技术">
+<meta property="article:tag" content="网页">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://oldcatmiku.github.io/2023/08/15/%E4%BF%AE%E6%94%B9-Hexo-%E7%9A%84%E6%B8%B2%E6%9F%93%E5%99%A8%EF%BC%8C%E8%AE%A9%E9%A6%96%E9%A1%B5%E5%8A%A0%E8%BD%BD-html-%E4%BB%A3%E7%A0%81/images/img/13.png">
+  
+  <!-- 站点验证相关 -->
+  
+    
+    
+    
+  
+  <!-- 样式表文件 -->
+  <link rel="stylesheet" id="kratos-css" href="/css/kratosr.min.css" media="all"></script>
+  
+    <link rel="stylesheet" id="darkmode-css" href="/css/kr-color-dark.min.css" media="(prefers-color-scheme: dark)"></script>
+    <script src="/js/kr-dark.min.js"></script>
+  
+  
+    <link rel="stylesheet" id="highlight-css" href="/css/highlight/night-eighties.min.css" media="all"></script>
+  
+  <link rel="stylesheet" id="fontawe-css" href="/vendors/font-awesome@4.7.0/css/font-awesome.min.css" media="all"></script>
+  <link rel="stylesheet" id="nprogress-css" href="/vendors/nprogress@0.2.0/nprogress.css" media="all"></script>
+  
+  
+  
+    <link rel="stylesheet" href="/vendors/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"></script>
+  
+  <!-- 不得不预先加载的一些JS文件 -->
+  <script src="/vendors/jquery@3.6.0/dist/jquery.min.js"></script>
+  
+  
+  <style>
+    
+    
+  </style>
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+    <body class="custom-background">
+        <div id="kratos-wrapper">
+    <div id="kratos-page">
+        <div id="kratos-header">
+            <header id="kratos-desktop-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="nav-header">
+                        <nav id="kratos-menu-wrap">
+                            <ul id="kratos-primary-menu" class="sf-menu">
+                                
+                                    
+                                        <li>
+                                            
+                                                <a href="/">
+                                            
+                                                
+                                                    <i class="fa fa-home"></i>
+                                                
+                                                首页
+                                            </a>
+                                            
+                                        </li>
+                                    
+                                        <li>
+                                            
+                                                <a href="/archives/">
+                                            
+                                                
+                                                    <i class="fa fa-file"></i>
+                                                
+                                                档案馆
+                                            </a>
+                                            
+                                        </li>
+                                    
+                                        <li>
+                                            
+                                                <a href="/friends/">
+                                            
+                                                
+                                                    <i class="fa fa-paw"></i>
+                                                
+                                                好伙伴
+                                            </a>
+                                            
+                                        </li>
+                                    
+                                        <li>
+                                            
+                                                <a>
+                                            
+                                                
+                                                    <i class="fa fa-link"></i>
+                                                
+                                                链接
+                                            </a>
+                                            
+                                                <ul class="sub-menu">
+                                                    
+                                                        <li>
+                                                            <a target="_blank" rel="noopener" href="https://candinya.com">
+                                                                
+                                                                作者博客
+                                                            </a>
+                                                        </li>
+                                                    
+                                                        <li>
+                                                            <a target="_blank" rel="noopener" href="https://github.com/Candinya/Kratos-Rebirth">
+                                                                
+                                                                项目链接
+                                                            </a>
+                                                        </li>
+                                                    
+                                                </ul>
+                                            
+                                        </li>
+                                    
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <header id="kratos-mobile-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="color-logo"><a href="/">老猫的 Blog</a></div>
+                    <div class="nav-toggle">
+                        <a class="kratos-nav-toggle js-kratos-nav-toggle">
+                            <i></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="kratos-start kratos-hero-2">
+            <!-- <div class="kratos-overlay"></div> -->
+            <div class="kratos-cover kratos-cover-2 text-center">
+                <div class="desc desc2 animate-box">
+                    <a href="/">
+                        <h2>老猫的 Blog</h2> <br />
+                        <span><div id='as_title'></div><script type='text/javascript' src='/js/as.js'></script>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="kratos-blog-post">
+            <div class="container">
+                <div id="main" class="row">
+                    
+
+        
+
+            <section class="col-md-8">
+
+        
+
+            <article itemscope itemtype="https://schema.org/Article">
+    
+    <link itemprop="mainEntityOfPage" href="https://oldcatmiku.github.io/2023/08/15/%E4%BF%AE%E6%94%B9-Hexo-%E7%9A%84%E6%B8%B2%E6%9F%93%E5%99%A8%EF%BC%8C%E8%AE%A9%E9%A6%96%E9%A1%B5%E5%8A%A0%E8%BD%BD-html-%E4%BB%A3%E7%A0%81/">
+    <div class="kratos-hentry kratos-post-inner clearfix">
+        <header class="kratos-entry-header">
+            
+                <h1 class="kratos-entry-title text-center" itemprop="name headline">修改 Hexo 的渲染器，让首页加载 html 代码</h1>
+            
+            
+            <ul class="kratos-post-meta text-center">
+                <li><time datetime="2023-08-15T06:25:36.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2023-08-15</time></li>
+                <li itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <i class="fa fa-user"></i> 作者 <span itemprop="name">oldcat</span>
+                </li>
+                
+                    <li>
+                        <i class="fa fa-edit"></i> 
+                        
+                        
+                            ~1.62K
+                        
+                        字
+                    </li>
+                
+                
+            </ul>
+        </header>
+        <div class="kratos-post-content">
+            
+            <div id="expire-alert" class="alert alert-warning hidden" role="alert">
+                <div class="icon"><i class="fa fa-warning"></i></div>
+                <div class="text"><p>本文最后编辑于 <time datetime="1723307065654"></time> 前，其中的内容可能需要更新。</p></div>
+            </div>
+            
+            
+            
+            <hr />
+            <div itemprop="articleBody"><p><img src="/images/img/12.png" alt="图0-1 subtitle的位置" title="subtitle的位置"><br>如图，箭头指向的是网站的副标题。<br>在 Hexo 根目录下<code>_config.yml</code>文件中，<code>subtitle</code>的值就是网页的副标题。<br>我的这个网站是这样写的：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Site</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">老猫的</span> <span class="string">Blog</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">&#x27;养老养老（目前正在测试捏www）&#x27;</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">&#x27;oldcat&#x27;</span></span><br><span class="line"><span class="attr">keywords:</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">oldcat</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-Hans</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">&#x27;Asia/Shanghai&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>如果想要实现“每次打开网页，都会出现不同的一句话”或者引入“一言”的话，就需要把副标题改成一段 html 代码。但是，如果直接修改<code>_config.yml</code>文件，就会有以下效果：<img src="/images/img/11.png" alt="图0-2 错误的修改" title="错误的修改"><br>所以我们要找到相关主题的渲染器，修改其中的代码，让它直接加载我们的 html 代码。<br><br></p>
+<h2 id="1-查找主题的渲染器"><a href="#1-查找主题的渲染器" class="headerlink" title="1. 查找主题的渲染器"></a>1. 查找主题的渲染器</h2><p>一般来说，Hexo 主题渲染器的位置是在<code>hexo\node_modules\[主题的名字]\layout</code><br>我用的是 kratos-rebirth 的主题，也就是在hexo\node_modules\hexo-theme-kratos-rebirth\layout。</p>
+<p>在这个目录下面有一些<code>.ejs</code>文件，EJS 是用 JavaScript 代码生成 HTML 页面的模板语言，想要了解更加详细的资料可以查阅 <a target="_blank" rel="noopener" href="https://ejs.bootcss.com/">EJS文档</a>。<br>我们要改的是 header，就打开目录下<code>_partial\header.ejs</code>（其他主题同理）<br><br></p>
+<h2 id="2-修改渲染器的-ejs-文件"><a href="#2-修改渲染器的-ejs-文件" class="headerlink" title="2. 修改渲染器的 ejs 文件"></a>2. 修改渲染器的 ejs 文件</h2><p>Blog 主题的开发者会根据 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/variables">Hexo API</a> 提供的变量 api 来获取页面信息，进行开发。<br>下面是摘抄的一些全局变量：</p>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>描述</th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>site</td>
+<td>网站变量</td>
+<td>object; 见 网站变量</td>
+</tr>
+<tr>
+<td>page</td>
+<td>针对该页面的内容以及 front-matter 中自定义的变量。</td>
+<td>object; 见 页面变量</td>
+</tr>
+<tr>
+<td>config</td>
+<td>网站配置</td>
+<td>object (站点的配置文件)</td>
+</tr>
+<tr>
+<td>theme</td>
+<td>主题配置。继承自网站配置。</td>
+<td>object (主题配置文件)</td>
+</tr>
+<tr>
+<td>path</td>
+<td>当前页面的路径（不含根路径）</td>
+<td>string</td>
+</tr>
+<tr>
+<td>url</td>
+<td>当前页面的完整网址</td>
+<td>string</td>
+</tr>
+<tr>
+<td>env</td>
+<td>环境变量</td>
+<td>object</td>
+</tr>
+</tbody></table>
+<p>根据表格知“站点的配置文件”对应的是<code>config</code>，所以要改的副标题是<code>config.subtitle</code>。<br>按<code>Ctrl+F</code>定位至副标题处，把ejs的标签<code>&lt;%= config.title %&gt;</code>换成需要用的 html 即可。<br><br></p>
+<h2 id="3-附加：个性化随机一言的代码"><a href="#3-附加：个性化随机一言的代码" class="headerlink" title="3. 附加：个性化随机一言的代码"></a>3. 附加：个性化随机一言的代码</h2><p>html:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&#x27;as_title&#x27;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&#x27;text/javascript&#x27;</span> <span class="attr">src</span>=<span class="string">&#x27;/js/[js的文件名].js&#x27;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>JavaScript:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> all = <span class="number">4</span> <span class="comment">//条目的总数</span></span><br><span class="line">tips = <span class="keyword">new</span> <span class="title class_">Array</span>(all);</span><br><span class="line"><span class="comment">//条目内容</span></span><br><span class="line">tips[<span class="number">0</span>] = <span class="string">&#x27;「空山新雨后，天气晚来秋」&#x27;</span>;</span><br><span class="line">tips[<span class="number">1</span>] = <span class="string">&#x27;「海内存知己，天涯若比邻」&#x27;</span>;</span><br><span class="line">tips[<span class="number">2</span>] = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">tips[<span class="number">3</span>] = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line"></span><br><span class="line">index = <span class="title class_">Math</span>.<span class="title function_">floor</span>(<span class="title class_">Math</span>.<span class="title function_">random</span>() * tips.<span class="property">length</span>);</span><br><span class="line"><span class="keyword">var</span> radm</span><br><span class="line">radm = <span class="title class_">Math</span>.<span class="title function_">floor</span>(<span class="title class_">Math</span>.<span class="title function_">random</span>() * <span class="number">2</span>);</span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;as_title&quot;</span>).<span class="property">innerHTML</span> = tips[index];</span><br></pre></td></tr></table></figure>
+<p>记得把 js 代码保存至<code>hexo\public\js\</code>内。</p>
+</div>
+        </div>
+        
+        <footer class="kratos-entry-footer clearfix">
+            
+            <div class="footer-tag clearfix">
+                <div class="pull-left">
+                <i class="fa fa-tags"></i>
+                    <a class="tag-none-link" href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a>, <a class="tag-none-link" href="/tags/%E7%BD%91%E9%A1%B5/" rel="tag">网页</a>
+                </div>
+                <div class="pull-date">
+                    <time datetime="2024-08-10T16:24:25.654Z" itemprop="dateModified">最后编辑：2024-08-11</time>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+        <nav class="navigation post-navigation clearfix" role="navigation">
+            
+            <div class="nav-previous clearfix">
+                <a title=" 老猫的项目" href="/2023/08/13/老猫的项目/">&lt; 上一篇</a>
+            </div>
+            
+            
+            <div class="nav-next clearfix">
+                <a title=" 关于我与这个网站" href="/2023/08/20/关于我与这个网站/">下一篇 &gt;</a>
+            </div>
+            
+        </nav>
+    
+    
+</article>
+
+        
+
+            </section>
+
+        
+
+                
+            
+
+<section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
+    <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
+    
+    
+                <aside id="krw-about" class="widget widget-kratos-about clearfix">
+    <div class="photo-background"></div>
+    <div class="photo-wrapper clearfix">
+        <div class="photo-wrapper-tip text-center">
+            <img class="about-photo" src="/images/head.png" loading="lazy" decoding="auto" />
+        </div>
+    </div>
+    <div class="textwidget">
+        <p class="text-center">oldcat</p>
+    </div>
+    <div class="site-meta">
+        <a class="meta-item" href="/archives/">
+            <span class="title">
+                文章
+            </span>
+            <span class="count">
+                11
+            </span>
+        </a>
+        <a class="meta-item" href="/categories/">
+            <span class="title">
+                分类
+            </span>
+            <span class="count">
+                0
+            </span>
+        </a>
+        <a class="meta-item" href="/tags/">
+            <span class="title">
+                标签
+            </span>
+            <span class="count">
+                10
+            </span>
+        </a>
+    </div>
+</aside>
+            
+                    <div class="sticky-area">
+                
+                    <aside id="krw-toc" class="widget widget-kratos-toc clearfix toc-div-class" >
+    <div class="photo-background"></div>
+    <h4 class="widget-title no-after">
+        <i class="fa fa-compass"></i>
+        文章目录
+        <span class="toc-progress-bar" role="progressbar" aria-label="阅读进度："></span>
+    </h4>
+    <div class="textwidget">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%9F%A5%E6%89%BE%E4%B8%BB%E9%A2%98%E7%9A%84%E6%B8%B2%E6%9F%93%E5%99%A8"><span class="toc-text">1. 查找主题的渲染器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E4%BF%AE%E6%94%B9%E6%B8%B2%E6%9F%93%E5%99%A8%E7%9A%84-ejs-%E6%96%87%E4%BB%B6"><span class="toc-text">2. 修改渲染器的 ejs 文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E9%99%84%E5%8A%A0%EF%BC%9A%E4%B8%AA%E6%80%A7%E5%8C%96%E9%9A%8F%E6%9C%BA%E4%B8%80%E8%A8%80%E7%9A%84%E4%BB%A3%E7%A0%81"><span class="toc-text">3. 附加：个性化随机一言的代码</span></a></li></ol>
+    </div>
+</aside>
+                
+                
+
+            
+                
+  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
+    <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
+      <div class="tag-clouds">
+        <a href="/tags/Q-A/" style="font-size: 0.6em;">Q&A</a> <a href="/tags/%E5%AF%BC%E8%88%AA/" style="font-size: 0.7em;">导航</a> <a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 0.8em;">技术</a> <a href="/tags/%E6%8E%8C%E6%9C%BA/" style="font-size: 0.6em;">掌机</a> <a href="/tags/%E6%8E%A8%E8%8D%90/" style="font-size: 0.6em;">推荐</a> <a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 0.6em;">日常</a> <a href="/tags/%E6%9B%B4%E6%96%B0/" style="font-size: 0.7em;">更新</a> <a href="/tags/%E6%B5%8B%E8%AF%95%E7%94%A8/" style="font-size: 0.6em;">测试用</a> <a href="/tags/%E7%BA%AA%E5%BF%B5%E6%97%A5/" style="font-size: 0.7em;">纪念日</a> <a href="/tags/%E7%BD%91%E9%A1%B5/" style="font-size: 0.6em;">网页</a>
+      </div>
+  </aside>
+
+            
+                
+  <aside id="krw-posts" class="widget widget-kratos-posts">
+  <h4 class="widget-title"><i class="fa fa-file"></i>最近写的</h4>
+  <div class="tab-content">
+      <ul class="list-group">
+        
+        
+          
+          
+            <a class="list-group-item" href="/2024/08/31/%E3%83%9F%E3%82%AF%E3%81%A1%E3%82%83%E3%82%93%E3%81%8A%E8%AA%95%E7%94%9F%E6%97%A5%E3%81%8A%E3%82%81%E3%81%A7%E3%81%A8%E3%81%86-1/"><i class="fa  fa-book"></i> ミクちゃんお誕生日おめでとう</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2024/08/29/%E6%B8%B8%E6%88%8F%E6%8E%A8%E8%8D%90%E2%99%A5/"><i class="fa  fa-book"></i> 喜欢的游戏♥</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2024/08/11/%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%B0%8F%E6%9B%B4%E6%96%B0-2/"><i class="fa  fa-book"></i> 博客的小更新-2</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2024/02/18/%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%B0%8F%E6%9B%B4%E6%96%B0-1/"><i class="fa  fa-book"></i> 博客的小更新-1</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2023/09/29/%E5%85%B3%E4%BA%8E_3DS_%E6%A1%8C%E9%9D%A2%E5%BE%BD%E7%AB%A0%E7%9A%84%E4%B8%80%E4%BA%9BQ&A/"><i class="fa  fa-book"></i> 关于 3DS 桌面徽章的一些Q&A</a>
+            
+          
+        
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+      </ul>
+  </div>
+  </aside>
+
+            
+    </div>
+</section>
+        
+        </div>
+    </div>
+</div>
+<footer>
+    <div id="footer"  >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                    <ul class="kratos-social-icons">
+                        <!-- Keep for compatibility -->
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <!-- New links -->
+                        
+                    </ul>
+                    <ul class="kratos-copyright">
+                        <div>
+                            <li>&copy; 2024 老猫的 Blog </li>
+                            <!-- 复制标明出处哟~. -->
+                            <li>本站已运行<span id="span_dt">Loading...</span></li>
+                        </div>
+                        <div>
+                            <li>Powered by <a href="https://hexo.io" target="_blank" rel="nofollow">Hexo</a></li>
+                            <li>Hosted on <a href="https://github.io" target="_blank">Github Pages</a></li>
+                            <li>Theme <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a></li>
+                            <li>Site Built With By <a href="https://oldcatmiku.top" target="_blank"> oldcat</a>.</li>
+                        </div>
+                        <!-- <div>
+                            <li>Background illustration By <a href="https://www.pixiv.net/users/202175" target="_blank" rel="nofollow">ArseniXC</a> and <a href="https://www.pixiv.net/users/952566" target="_blank" rel="nofollow">フェイトリネ - アルファ</a>.</li>
+                        </div> -->
+                        <div>
+                            <li>Thanks to EVERYONE who contributed to this website.<i class="fa fa-heart throb" style="color:#d43f57"></i></li>
+                        </div>
+                        <div>
+                            <li>友情链接 <a href="https://novels.39s.moe/" target="_blank" rel="nofollow"><ruby>2034的文库</ruby></a></li>
+                        </div>
+                        <div>
+                            <li><a href="https://beian.miit.gov.cn" rel="external nofollow" target="_blank"><a href="https://icp.gov.moe/?keyword=20233039" target="_blank">萌ICP备20233039号</a></a></li>
+                            
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="kr-tool text-center">
+            <div class="tool">
+                
+                    <div class="box search-box">
+                        <a href="/search/">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="box theme-box" id="darkmode-switch">
+                        <span class="fa fa-adjust"></span>
+                    </div>
+                
+                
+                
+            </div>
+            <div class="box gotop-box">
+                <span class="fa fa-chevron-up"></span>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+
+        <script defer src="/vendors/bootstrap@3.3.4/dist/js/bootstrap.min.js"></script>
+<script defer src="/vendors/nprogress@0.2.0/nprogress.js"></script>
+<script>
+    if (!window.kr) {
+        window.kr = {};
+    }
+    window.kr.notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));
+    window.kr.siteRoot = "/";
+</script>
+
+
+    <script async src="/js/candy.min.js"></script>
+
+
+
+
+    <script defer src="/vendors/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+<script defer src="/js/kratosr.min.js"></script>
+<script defer src="/js/pjax.min.js"></script>
+
+
+
+<!-- Extra support for third-party plguins  -->
+
+
+    </body>
+</html>
