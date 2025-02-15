@@ -304,7 +304,7 @@ span.mjx-chtml.MJXc-display {
     background-image: url(../images/banner_dark.webp)
 } */
 
-@media (min-width:768px) {
+/* @media (min-width:768px) {
     body.custom-background {
         background-image: url(../images/bg.webp);
         background-position: center;
@@ -316,7 +316,7 @@ span.mjx-chtml.MJXc-display {
 
 .post-comments.bg-image textarea {
     background: url(../images/bg.webp) 100% 100% no-repeat !important
-}
+} */
 
 .gt-counts {
     color: #fff
@@ -343,5 +343,10 @@ span.mjx-chtml.MJXc-display {
 }
 .pstilte{
     color:#3ea0e7;
+}
+dot {
+    -webkit-text-emphasis: dot white;
+    text-emphasis: dot white;
+    text-emphasis-position: under;
 }
 /*# sourceMappingURL=../maps/kr-color-dark.min.css.map */

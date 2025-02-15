@@ -3535,3 +3535,8 @@ span.mjx-chtml.MJXc-display {
 small{
     font-size: 9px;
 }
+dot {
+    -webkit-text-emphasis: dot black;
+    text-emphasis: dot black;
+    text-emphasis-position: under;
+}

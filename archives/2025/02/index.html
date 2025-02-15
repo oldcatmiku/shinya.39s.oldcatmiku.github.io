@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <link rel="icon" href="../images/LOGO2.ico">
   
-  <title>python pip 的杂谈 | Shinya</title>
+  <title>档案馆: 2025-02 | Shinya</title>
   
   <meta name="author" content="oldcat" />
   <meta http-equiv="Cache-Control" content="no-transform" />
@@ -15,23 +15,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta name="format-detection" content="telphone=no, email=no" />
   
-    <meta name="keywords" content="技术, 日常" />
+    <meta name="keywords" content="" />
   
-  <meta name="description" content="本文章可能包含强烈的主观性语言以及玄学的解决方案，请谨慎阅读。   我被 pip 整的头痛死了。最初接触 python 的时候，就因为环境变量栽过坑，虽然是小问题，自己查资料就弄好了。后来又被 pip 的各种无法解释的报错弄的头大。例如有：超长问题报错，找不到各种文件，带????的报错……问过 ChatGPT，虽然看起来挺专业的，实际上也未能解决问题。有一说一，它最后那句“考虑重新安装 Pytho">
-<meta property="og:type" content="article">
-<meta property="og:title" content="python pip 的杂谈">
-<meta property="og:url" content="https://oldcatmiku.github.io/python%20pip%20%E7%9A%84%E6%9D%82%E8%B0%88/index.html">
+  <meta name="description" content="oldcat">
+<meta property="og:type" content="website">
+<meta property="og:title" content="档案馆: 2025-02">
+<meta property="og:url" content="https://oldcatmiku.github.io/archives/2025/02/index.html">
 <meta property="og:site_name" content="Shinya">
-<meta property="og:description" content="本文章可能包含强烈的主观性语言以及玄学的解决方案，请谨慎阅读。   我被 pip 整的头痛死了。最初接触 python 的时候，就因为环境变量栽过坑，虽然是小问题，自己查资料就弄好了。后来又被 pip 的各种无法解释的报错弄的头大。例如有：超长问题报错，找不到各种文件，带????的报错……问过 ChatGPT，虽然看起来挺专业的，实际上也未能解决问题。有一说一，它最后那句“考虑重新安装 Pytho">
+<meta property="og:description" content="oldcat">
 <meta property="og:locale">
-<meta property="og:image" content="https://oldcatmiku.github.io/python%20pip%20%E7%9A%84%E6%9D%82%E8%B0%88/images/img/15.png">
-<meta property="article:published_time" content="2023-08-27T17:55:11.000Z">
-<meta property="article:modified_time" content="2024-08-10T16:26:46.771Z">
+<meta property="og:image" content="https://oldcatmiku.github.io/images/LOGO2.ico">
 <meta property="article:author" content="oldcat">
-<meta property="article:tag" content="日常">
-<meta property="article:tag" content="技术">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://oldcatmiku.github.io/python%20pip%20%E7%9A%84%E6%9D%82%E8%B0%88/images/img/15.png">
+<meta name="twitter:image" content="https://oldcatmiku.github.io/images/LOGO2.ico">
   
   <!-- 站点验证相关 -->
   
@@ -129,105 +125,77 @@
 
         
 
-            <article itemscope itemtype="https://schema.org/Article">
-    
-    <link itemprop="mainEntityOfPage" href="https://oldcatmiku.github.io/python%20pip%20%E7%9A%84%E6%9D%82%E8%B0%88/">
-    <div class="kratos-hentry kratos-post-inner clearfix">
-        <header class="kratos-entry-header">
             
-                <h1 class="kratos-entry-title text-center" itemprop="name headline">python pip 的杂谈</h1>
-            
-            
-            <ul class="kratos-post-meta text-center">
-                <li><time datetime="2023-08-27T17:55:11.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2023-08-28</time></li>
-                <li itemprop="author" itemscope itemtype="https://schema.org/Person">
-                    <i class="fa fa-user"></i> 作者 <span itemprop="name">oldcat</span>
-                </li>
-                
-                    <li>
-                        <i class="fa fa-edit"></i> 
-                        
-                        
-                            874
-                        
-                        字
-                    </li>
-                
-                
-            </ul>
-        </header>
-        <div class="kratos-post-content">
-            
-            <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                <div class="icon"><i class="fa fa-warning"></i></div>
-                <div class="text"><p>本文最后编辑于 <time datetime="1723307206771"></time> 前，其中的内容可能需要更新。</p></div>
+<style>
+  .post-meta time{color:#00a7e0}
+  @media (max-width:767px){.posts-collapse{margin:0 20px}
+  .posts-collapse .post-meta,
+  .posts-collapse .post-title{display:block;width:auto;text-align:left}}
+  .posts-collapse{position:relative}
+  .posts-collapse::after{content:" ";position:absolute;top:20px;left:0;margin-left:-2px;width:4px;height:calc(100% - 35px);background:#f5f5f5;z-index:-1}
+  @media (max-width:991px){.posts-collapse{margin:0 20px}}
+  .posts-collapse .collection-title{position:relative}
+  .posts-collapse .collection-title h1,
+  .posts-collapse .collection-title h2{margin-left:20px}
+  .posts-collapse .collection-title small{color:#bbb;margin-left:5px}
+  .posts-collapse .collection-title::before{content:" ";position:absolute;left:0;top:50%;margin-left:-4px;margin-top:-4px;width:8px;height:8px;background:#bbb;border-radius:50%}
+  .posts-collapse .post-header{position:relative;transition-duration:.2s;transition-timing-function:ease-in-out;transition-delay:0s;transition-property:border}
+  .posts-collapse .post-header::before{content:" ";position:absolute;left:0;top:12px;width:6px;height:6px;margin-left:-4px;background:#bbb;border-radius:50%;border:1px solid #fff;transition: all .3s ease-in-out}
+  .posts-collapse .post-header:hover{border-bottom-color:#666}
+  .posts-collapse .post-header:hover::before{background:#222}
+  .posts-collapse .post-meta{position:absolute;font-size:12px;left:20px;top:5px}
+  .posts-collapse .post-comments-count{display:none}
+  .posts-collapse .post-title{margin-left:70px;font-size:16px;font-weight:400;line-height:inherit}
+  .posts-collapse .post-title::after{margin-left:3px;opacity:.6}
+  .posts-collapse .post-title a{color:#666;border-bottom:none}
+</style>
+
+  <article>
+      <div class="kratos-hentry kratos-post-inner clearfix">
+          <div class="kratos-post-content">
+            <h2 class="title-h2 text-center">文章归档</h2>
+            <div id="archives">
+              <div class="post-block archive post" style="margin-left: 2em;">
+                <h3 class="archive-page-counter">当前共有 1 篇</h3>
+                <div class="posts-collapse">
+                  
+                  
+                    
+                    
+                      <!-- 没遇到Title的会被自动忽略年份，即使并不一致 -->
+                      
+                      <div class="collection-title">
+                        <a href="/archives/2025/"><h2 class="archive-year">2025</h2></a>
+                      </div>
+                    
+                    
+                      <article class="post" itemscope itemtype="https://schema.org/Article">
+                        <header class="post-header">
+                          <h3 class="post-title">
+                            
+                                <a class="post-title-link" href="/2025/%E5%89%A7%E6%83%85%E5%88%86%E6%9E%90%EF%BC%8C%E2%80%9C%E7%BC%96%E5%89%A7%E6%94%BE%E3%80%8A%E6%98%A5%E6%97%A5%E5%BD%B1%E3%80%8B%E6%98%AF%E5%9C%A8%E7%8E%A9%E6%A2%97%EF%BC%9F%E2%80%9D/" itemprop="mainEntityOfPage">
+                                  <span itemprop="name headline">剧情分析，“编剧放《春日影》是在玩梗？”</span>
+                                </a>
+                            
+                          </h3>
+                          <div class="post-meta">
+                            <time class="post-time" itemprop="datePublished"
+                                  datetime="2025-02-15T13:57:17.000Z">
+                              02-15
+                            </time>
+                          </div>
+                        </header>
+                      </article>
+                    
+                  
+                </div>
+              </div>
             </div>
-            
-            
-            
-            <hr />
-            <div itemprop="articleBody"><div class="alert alert-warning"><div class="icon"><i class="fa fa-warning"></i></div><div class="text"><p>本文章可能包含强烈的主观性语言以及玄学的解决方案，请谨慎阅读。</p>
-</div></div>
-
-<p>我被 pip 整的头痛死了。<br>最初接触 python 的时候，就因为<strong>环境变量</strong>栽过坑，虽然是小问题，自己查资料就弄好了。后来又被 pip 的各种无法解释的报错弄的头大。例如有：<br>超长问题报错，找不到各种文件，带<code>????</code>的报错……<br>问过 ChatGPT，虽然看起来挺专业的，实际上也未能解决问题。<br>有一说一，它最后那句“考虑重新安装 Python，确保按照官方指导进行操作”可能是最有用的。（笑）</p>
-<p>如果你和我一样，遇到网络上搜不到的、无法解释的、内容很长的报错，可以尝试重装了。<br><br></p>
-<h2 id="Python-重装指南："><a href="#Python-重装指南：" class="headerlink" title="Python 重装指南："></a>Python 重装指南：</h2><p>建议按照下面来操作：</p>
-<ol>
-<li><p><strong>测试各个版本的 pip 是否可用。</strong><br> 按 Windows 键，搜索 python 并右键“打开文件所在位置”，找出电脑里各个版本的安装目录。<br> 打开该目录下<code>Scripts</code>目录，用命令行测试是否能使用 pip。<br> 如果都不可以用，进行步骤 2。</p>
-</li>
-<li><p><strong>卸载电脑里的 python</strong></p>
-<div class="panel panel-warning">
-    <div class="panel-title">注意！！</div>
-    <div class="panel-body">
-        <p>默认 Python launcher 打开了你最新版本的解释器。但用<code>python 3.X</code>即可指定版本，如果嫌麻烦设置，在重装前，建议删除所有版本的 python，以免安装旧版本与新版本的冲突。</p>
-
-    </div>
-    </div>
-<p> 在控制面板里逐一删除各版本 python，“Python launcher”可以不删。<br> 另外，建议查看<a target="_blank" rel="noopener" href="https://cn.bing.com/search?q=%E8%AE%BE%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F">环境变量</a>里是否还有遗留。</p>
-</li>
-<li><p><strong>重装 python</strong><br> <a target="_blank" rel="noopener" href="https://mirrors.huaweicloud.com/python/">镜像站</a>的速度很快，建议找到一个没有安装过的版本下载。<br> 点进需要的版本后一般很多文件，找到 .exe 后缀的即可，例如<code>python-3.9.4.exe</code>。<br> 个人推荐 3.8.6（玄学）当然需要新版本的可以无视。</p>
- <br>
-
-<p> 安装时请务必勾选这个：<br> <img src="/images/img/14.png" alt="可以自动配置环境变量"></p>
-</li>
-<li><p><strong>完成</strong><br> 如果上述操作无误，打开命令行后用<code>pip --vision</code>或安装某个库后，无报错就是成功🌶️！</p>
-</li>
-</ol>
-<br>
-
-<p><small>本文写作时，来自异国的一条天气报道：<br>“ チェンチョウ&emsp;雷を伴う暴風雨&emsp;23°C &#x2F; 20°C ”</small></p>
-</div>
         </div>
-        
-        <footer class="kratos-entry-footer clearfix">
-            
-            <div class="footer-tag clearfix">
-                <div class="pull-left">
-                <i class="fa fa-tags"></i>
-                    <a class="tag-none-link" href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a>, <a class="tag-none-link" href="/tags/%E6%97%A5%E5%B8%B8/" rel="tag">日常</a>
-                </div>
-                <div class="pull-date">
-                    <time datetime="2024-08-10T16:26:46.771Z" itemprop="dateModified">最后编辑：2024-08-11</time>
-                </div>
-            </div>
-        </footer>
-    </div>
-    
-        <nav class="navigation post-navigation clearfix" role="navigation">
-            
-            <div class="nav-previous clearfix">
-                <a title=" 修改 Hexo 的渲染器，让首页加载 html 代码" href="/修改-Hexo-的渲染器，让首页加载-html-代码/">&lt; 上一篇</a>
-            </div>
-            
-            
-            <div class="nav-next clearfix">
-                <a title=" ミクちゃんお誕生日おめでとう" href="/ミクちゃんお誕生日おめでとう/">下一篇 &gt;</a>
-            </div>
-            
-        </nav>
-    
-    
-</article>
+      </div>
+      
+  </article>
+
 
         
 
@@ -240,6 +208,8 @@
 
 <section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
     <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
+    
+        <div class="sticky-area">
     
     
                 <aside id="krw-about" class="widget widget-kratos-about clearfix">
@@ -258,7 +228,7 @@
                 文章
             </span>
             <span class="count">
-                7
+                8
             </span>
         </a>
         <a class="meta-item" href="/categories/">
@@ -274,14 +244,12 @@
                 标签
             </span>
             <span class="count">
-                8
+                9
             </span>
         </a>
     </div>
 </aside>
             
-                    <div class="sticky-area">
-                
                 
 
             
@@ -289,7 +257,7 @@
   <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
     <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
       <div class="tag-clouds">
-        <a href="/tags/Q-A/" style="font-size: 0.6em;">Q&A</a> <a href="/tags/%E5%AF%BC%E8%88%AA/" style="font-size: 0.6em;">导航</a> <a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 0.8em;">技术</a> <a href="/tags/%E6%8E%8C%E6%9C%BA/" style="font-size: 0.6em;">掌机</a> <a href="/tags/%E6%8E%A8%E8%8D%90/" style="font-size: 0.6em;">推荐</a> <a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 0.6em;">日常</a> <a href="/tags/%E7%BA%AA%E5%BF%B5%E6%97%A5/" style="font-size: 0.7em;">纪念日</a> <a href="/tags/%E7%BD%91%E9%A1%B5/" style="font-size: 0.6em;">网页</a>
+        <a href="/tags/Q-A/" style="font-size: 0.6em;">Q&A</a> <a href="/tags/%E5%AF%BC%E8%88%AA/" style="font-size: 0.6em;">导航</a> <a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 0.8em;">技术</a> <a href="/tags/%E6%8E%8C%E6%9C%BA/" style="font-size: 0.6em;">掌机</a> <a href="/tags/%E6%8E%A8%E8%8D%90/" style="font-size: 0.6em;">推荐</a> <a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 0.6em;">日常</a> <a href="/tags/%E7%BA%AA%E5%BF%B5%E6%97%A5/" style="font-size: 0.7em;">纪念日</a> <a href="/tags/%E7%BD%91%E9%A1%B5/" style="font-size: 0.6em;">网页</a> <a href="/tags/%E8%A7%82%E7%82%B9/" style="font-size: 0.6em;">观点</a>
       </div>
   </aside>
 
@@ -303,34 +271,36 @@
         
           
           
-            <a class="list-group-item" href="/%E3%83%9F%E3%82%AF%E3%81%A1%E3%82%83%E3%82%93%E3%81%8A%E8%AA%95%E7%94%9F%E6%97%A5%E3%81%8A%E3%82%81%E3%81%A7%E3%81%A8%E3%81%86-1/"><i class="fa  fa-book"></i> ミクちゃんお誕生日おめでとう</a>
+            <a class="list-group-item" href="/2025/%E5%89%A7%E6%83%85%E5%88%86%E6%9E%90%EF%BC%8C%E2%80%9C%E7%BC%96%E5%89%A7%E6%94%BE%E3%80%8A%E6%98%A5%E6%97%A5%E5%BD%B1%E3%80%8B%E6%98%AF%E5%9C%A8%E7%8E%A9%E6%A2%97%EF%BC%9F%E2%80%9D/"><i class="fa  fa-book"></i> 剧情分析，“编剧放《春日影》是在玩梗？”</a>
             
           
         
           
           
-            <a class="list-group-item" href="/%E6%B8%B8%E6%88%8F%E6%8E%A8%E8%8D%90%E2%99%A5/"><i class="fa  fa-book"></i> 喜欢的游戏♥</a>
+            <a class="list-group-item" href="/2024/%E3%83%9F%E3%82%AF%E3%81%A1%E3%82%83%E3%82%93%E3%81%8A%E8%AA%95%E7%94%9F%E6%97%A5%E3%81%8A%E3%82%81%E3%81%A7%E3%81%A8%E3%81%86-1/"><i class="fa  fa-book"></i> ミクちゃんお誕生日おめでとう</a>
             
           
         
           
           
-            <a class="list-group-item" href="/%E5%85%B3%E4%BA%8E_3DS_%E6%A1%8C%E9%9D%A2%E5%BE%BD%E7%AB%A0%E7%9A%84%E4%B8%80%E4%BA%9BQ&A/"><i class="fa  fa-book"></i> 关于 3DS 桌面徽章的一些Q&A</a>
+            <a class="list-group-item" href="/2024/%E6%B8%B8%E6%88%8F%E6%8E%A8%E8%8D%90%E2%99%A5/"><i class="fa  fa-book"></i> 喜欢的游戏♥</a>
             
           
         
           
           
-            <a class="list-group-item" href="/%E3%83%9F%E3%82%AF%E3%81%A1%E3%82%83%E3%82%93%E3%81%8A%E8%AA%95%E7%94%9F%E6%97%A5%E3%81%8A%E3%82%81%E3%81%A7%E3%81%A8%E3%81%86/"><i class="fa  fa-book"></i> ミクちゃんお誕生日おめでとう</a>
+            <a class="list-group-item" href="/2023/%E5%85%B3%E4%BA%8E_3DS_%E6%A1%8C%E9%9D%A2%E5%BE%BD%E7%AB%A0%E7%9A%84%E4%B8%80%E4%BA%9BQ&A/"><i class="fa  fa-book"></i> 关于 3DS 桌面徽章的一些Q&A</a>
             
           
         
           
           
-            <a class="list-group-item" href="/python%20pip%20%E7%9A%84%E6%9D%82%E8%B0%88/"><i class="fa  fa-book"></i> python pip 的杂谈</a>
+            <a class="list-group-item" href="/2023/%E3%83%9F%E3%82%AF%E3%81%A1%E3%82%83%E3%82%93%E3%81%8A%E8%AA%95%E7%94%9F%E6%97%A5%E3%81%8A%E3%82%81%E3%81%A7%E3%81%A8%E3%81%86/"><i class="fa  fa-book"></i> ミクちゃんお誕生日おめでとう</a>
             
           
         
+          
+            
           
             
           
