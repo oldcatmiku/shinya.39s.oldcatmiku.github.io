@@ -3517,13 +3517,13 @@ span.mjx-chtml.MJXc-display {
 } */
 
 @media (min-width:768px) {
-    /* body.custom-background {
+    body.custom-background {
         background-image: url(../images/bg.webp);
         background-position: center;
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
-    } */
+    }
 }
 
 .post-comments.bg-image textarea {
