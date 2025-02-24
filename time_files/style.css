@@ -1,0 +1,215 @@
+@keyframes nonlinear-animation {
+    0% {
+      transform: scaleY(1) translate(-50%,-100%) translateY(24px);
+    }
+    50% {
+      transform: scaleY(1.5) translate(-50%,-100%) translateY(24px);
+    }
+    100% {
+      transform: scaleY(1) translate(-50%,-100%) translateY(24px);
+    }
+  }
+@keyframes nonlinear-animation-2 {
+    0% {
+      transform: scaleX(1) scaleY(1) translate(-50%,-100%) translateY(131px) translateX(10px);
+    }
+    70% {
+      transform: scaleX(1.5) scaleY(1) translate(-50%,-100%) translateY(131px) translateX(10px);
+    }
+    100% {
+      transform: scaleX(1) scaleY(1) translate(-50%,-100%) translateY(131px) translateX(10px);
+    }
+  }
+
+@keyframes nonlinear-animation-3 {
+    0% {
+        background-position: 0 0;
+        }
+    100% {
+        background-position: 100% 0;
+
+    }
+}
+  
+body {
+    background-color:#002100;
+    background-size:100% auto;
+    background-repeat:no-repeat;
+    overflow:hidden;
+}
+
+/* * { 
+	 cursor: none!important; 
+}  */
+.maohao{
+    height: calc(70vw* 285 / 1920);
+}
+.footer{
+  height: 35%;
+  width: 100%;
+  background-color: #002100;
+  position: fixed;
+  bottom: 0;
+  background:rgba(0,0,0,0);
+}
+.footer-text{
+    font-family: 华文行楷;
+    background: -webkit-linear-gradient(left, #ffffff, #E6D205 25%, #ffffff 50%, #dad280 75%, #ffffff);
+    color:transparent;
+    background-clip:text;
+    background-size:200% 100%;
+    font-size: 150px;
+    text-align: center;
+    animation: nonlinear-animation-3 1.5s infinite linear;
+}
+.text-ClockR {
+    z-index:199;
+    position:absolute;
+    top:15%;
+    left:40%;
+    font: calc(100vw*285/1920) Hei, Helvetica, Arial, sans-serif;
+    color: #888888;
+    Float:left;
+}
+
+.Test-text {
+    font: calc(100vw*35/1920) Hei, Helvetica, Arial, sans-serif;
+    color: #888888;
+    text-align:center;
+ }
+
+.clock {
+    position: absolute;
+    opacity: 1;
+}
+
+.fill .clock {
+    left: 20%;
+    top: 30%;
+}
+
+.centre {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    width: 0;
+    height: 0;
+}
+
+.expand {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+.anchor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+}
+
+.element {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.round {
+    border-radius: 296px;
+}
+
+.circle-1 {
+    background: #888888;
+    width: 12px;
+    height: 12px;
+}
+
+.circle-2 {
+    background: #770000;
+    width: 8px;
+    height: 8px;
+}
+
+.circle-3 {
+    background: black;
+    width: 4px;
+    height: 4px;
+}
+
+.second {
+    transform: rotate(180deg);
+}
+
+.minute {
+    transform: rotate(54deg);
+}
+
+.second-hand {
+    width: 2px;
+    height: 164px;
+    background: #770000;
+    transform: translate(-50%,-100%) translateY(24px);
+}
+.secondGhb{
+    transform: translate(-50%,-100%) translateY(24px);
+    animation: nonlinear-animation 1.5s ease-in-out infinite;
+}
+.hour {
+    transform: rostate(304.5deg);
+}
+
+.thin-hand {
+    width: 4px;
+    height: 67px;
+    background: #888888;
+    transform: translate(-50%,-100%);
+}
+
+.fat-hand {
+    width: 7px;
+    height: 57px;
+    border-radius: 10px;
+    background: #888888;
+    transform: translate(-50%,-100%) translateY(-18px);
+}
+
+.minute-hand {
+    height: 112px;
+}
+
+.hour-text {
+    position: absolute;
+    font: 30px Hei, Helvetica, Arial, sans-serif;
+    color: #888888;
+    transform: translate(-50%,-50%);
+}
+
+.hour-10 {
+    padding-left: 0.4ex;
+}
+.hour-11 {
+    padding-left: 0.25ex;
+}
+
+.minute-text {
+    position: absolute;
+    font: 22px Avenir Next, Helvetica, Arial, sans-serif;
+    color: #888888;
+    transform: translate(-50%,-50%);
+}
+
+.minute-line {
+    background: white;
+    width: 1px;
+    height: 9px;
+    transform: translate(-50%,-100%) translateY(-131px);
+    opacity: 0.34;
+}
+.minute-dj{
+    transform: translate(-50%,-100%) translateY(131px);
+    height: 220px;
+    animation: nonlinear-animation-2 5s linear infinite;
+}
